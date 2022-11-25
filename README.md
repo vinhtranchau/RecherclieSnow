@@ -1,6 +1,7 @@
-# Heroes
+# Angular Tutorial (Heroes)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+And this project is showing how to build android project from scratch.
 
 ## Development server
 
@@ -25,3 +26,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Development
+
+### Pipeline
+
+We have very basic pipeline configured for the development. The main branch for the development is `develop` and `master` branch is directly connected with the hosting server.
+Automatic hosting service is running through the GitHub Pipeline, we are using GitHub Pages for the hosting.
+
+#### Workflows
+* Push to the `develop` for the normal development
+* Create PR and merge into `master` for the deployment
