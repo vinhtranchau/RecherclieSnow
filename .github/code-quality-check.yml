@@ -1,0 +1,29 @@
+name: Code Quality Check
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Code Quality Check
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.17.0]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Node Modules
+        run: npm install
+
+      - name: AoT Build
+        run: npm run build

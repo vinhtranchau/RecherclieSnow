@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:gh-page": "ng build --output-path dist --base-href /angular-tutorial-hero/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
